@@ -1,4 +1,3 @@
-From openjdk:8
-EXPOSE 8080
-ADD target/springboot-images-new.jar springboot-images-new.jar
-ENTRYPOINT ["java","-jar","/springboot-images-new.jar"]
+FROM eclipse-temurin:17-jdk-jammy  # Official Java 17 image
+COPY springboot-images-new.jar springboot-images-new.jar
+ENTRYPOINT ["java", "-jar", "/springboot-images-new.jar"]
